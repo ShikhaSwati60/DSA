@@ -3,6 +3,7 @@ package Linked_List;
 import java.util.Scanner;
 
 public class MiddleNode extends Linked_List{
+    //....MIDDLE NODE OF LINKED LIST....
     static int midNode(Node head)
     {
         Node slow=head;
