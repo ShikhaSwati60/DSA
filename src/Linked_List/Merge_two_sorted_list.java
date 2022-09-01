@@ -1,8 +1,8 @@
 package Linked_List;
-
 import java.util.Scanner;
 
 public class Merge_two_sorted_list extends Linked_List {
+
     static Node merge(Node l1,Node l2){
         if(l1==null)
             return l2;
@@ -20,28 +20,43 @@ public class Merge_two_sorted_list extends Linked_List {
         }
 
     }
+
     public static void main(String[] args) {
-       Linked_List list1=new Merge_two_sorted_list();
+        Linked_List list1=new Merge_two_sorted_list();
         Linked_List list2=new Merge_two_sorted_list();
+
         Scanner sc=new Scanner(System.in);
-        System.out.print("Enter no. of nodes in the first list: ");
+        System.out.print("Enter no. of nodes in the first sorted list: ");
         int n=sc.nextInt();
+        System.out.println("Enter the elements");
         for(int i=0;i<n;i++)
         {
             list1.insert(sc.nextInt());
         }
-        System.out.print("Enter no. of nodes in the second list: ");
+
+        System.out.print("Enter no. of nodes in the second sorted list: ");
         int m=sc.nextInt();
+        System.out.println("Enter the elements");
         for(int i=0;i<m;i++)
         {
             list2.insert(sc.nextInt());
         }
+
         System.out.print("First sortedLinked list: ");
         list1.display();
-        System.out.print("Second sortedLinked list: ");
+        System.out.print("\nSecond sortedLinked list: ");
         list2.display();
+
         Node head1=list1.head;
         Node head2=list2.head;
+
         Node res=merge(head1,head2);
+        System.out.print("\nSorted list after merging: ");
+        while(res!=null)
+        {
+            System.out.print(res.data+"->");
+            res=res.next;
+        }
+        System.out.print("null");
     }
 }
