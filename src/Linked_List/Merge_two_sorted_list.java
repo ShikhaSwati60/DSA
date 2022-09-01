@@ -2,7 +2,6 @@ package Linked_List;
 import java.util.Scanner;
 
 public class Merge_two_sorted_list extends Linked_List {
-
     static Node merge(Node l1,Node l2){
         if(l1==null)
             return l2;
