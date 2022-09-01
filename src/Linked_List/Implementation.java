@@ -36,11 +36,11 @@ class Linked_List {
             return;
         }
         Node temp = head;
-        while (temp.next != null) {
+        while (temp != null) {
             System.out.print(temp.data + "->");
             temp = temp.next;
         }
-        System.out.print(temp.data);
+        System.out.print("null");
     }
 
 }
