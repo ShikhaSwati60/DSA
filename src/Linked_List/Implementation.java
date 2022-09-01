@@ -18,14 +18,13 @@ class Linked_List {
         Node node = new Node(data);
         if (head == null) {
            head = node;
-            tail= node;
         }
         else {
             tail.next = node;     //insertion at end
-            tail=node;
             //node.next=head;      //insertion at beginning
             //head=node;
         }
+        tail= node;
 
     }
  //........Displaying the nodes present in the list..........
